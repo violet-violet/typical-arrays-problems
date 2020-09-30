@@ -1,10 +1,24 @@
 
 exports.min = function min (array) {
-  return 0;
+  if ( (array === undefined) || (array == 0)) {
+    return 0;
+  } else {
+    let rez = array.sort(function(a, b) {
+        return a - b;
+      });
+    return rez[0];
+  }
 }
 
 exports.max = function max (array) {
-  return 0;
+  if ( (array === undefined) || (array == 0)) {
+    return 0;
+  } else {
+    let rez = array.sort(function(a, b) {
+        return a - b;
+      });
+    return rez[rez.length - 1];
+  }
 }
 
 exports.avg = function avg (array) {
